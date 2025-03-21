@@ -103,3 +103,26 @@ Saat kita menjalankan aplikasi dibrowser mendapatkan koordinat GPS karena browse
 
 - Soal 14
   Code yang ditambahkan hanya menangani error saja untuk hasil masih sama dengan soal 13 tampilannya.
+
+## Praktikum 8
+
+- Soal 15 <br>
+  Mengganti dengan title nama
+
+  ```dart
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color,
+      appBar: AppBar(title: Text('Navigation First Fachrio')),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('Change Color'),
+          onPressed: () {
+            _navigateAndGetColor(context);
+          },
+        ),
+      ),
+    );
+  }
+  ```
