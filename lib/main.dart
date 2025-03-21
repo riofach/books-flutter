@@ -109,15 +109,20 @@ class _FuturePageState extends State<FuturePage> {
     });
   }
 
-  late Future<List<int>> futures;
-  @override
-  void initState() {
-    super.initState();
-    futures = Future.wait<int>([
-      returnOneAsync(),
-      returnTwoAsync(),
-      returnThreeAsync(),
-    ]);
+  // late Future<List<int>> futures;
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   futures = Future.wait<int>([
+  //     returnOneAsync(),
+  //     returnTwoAsync(),
+  //     returnThreeAsync(),
+  //   ]);
+  // } //praktikum 4
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Error');
   }
 
   @override
@@ -131,6 +136,24 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text('Go!'),
               onPressed: () {
+                setState(() {
+                  result = 'Loading...'; // Mengubah status menjadi 'Loading...'
+                });
+
+                // getData() // Memanggil fungsi untuk mengambil data
+                //     .then((value) {
+                //       result = value.body.toString().substring(
+                //         0,
+                //         450,
+                //       ); // Menampilkan 450 karakter pertama dari hasil
+                //       setState(() {}); // Memperbarui tampilan
+                //     })
+                //     .catchError((error) {
+                //       result =
+                //           'Error: $error'; // Menampilkan pesan kesalahan jika ada
+                //       setState(() {}); // Memperbarui tampilan
+                //     }); // praktikum 1
+
                 // count(); //praktikum 2
 
                 // getNumber()
@@ -145,32 +168,27 @@ class _FuturePageState extends State<FuturePage> {
                 //       });
                 //     }); //praktikum 3
 
-                returnFG(); //praktikum 4
+                // returnFG(); //praktikum 4
 
-                setState(() {
-                  result = 'Loading...'; // Mengubah status menjadi 'Loading...'
-                });
-
-                getData() // Memanggil fungsi untuk mengambil data
+                returnError()
                     .then((value) {
-                      result = value.body.toString().substring(
-                        0,
-                        450,
-                      ); // Menampilkan 450 karakter pertama dari hasil
-                      setState(() {}); // Memperbarui tampilan
+                      setState(() {
+                        result = 'Success';
+                      });
                     })
                     .catchError((error) {
-                      result =
-                          'Error: $error'; // Menampilkan pesan kesalahan jika ada
-                      setState(() {}); // Memperbarui tampilan
-                    });
+                      setState(() {
+                        result = error.toString();
+                      });
+                    })
+                    .whenComplete(() => print('Completed')); //praktikum 5
               },
             ),
             const Spacer(),
             Text(result),
             const Spacer(),
-            const CircularProgressIndicator(),
-            const Spacer(),
+            // const CircularProgressIndicator(),
+            // const Spacer(),
           ],
         ),
       ),
