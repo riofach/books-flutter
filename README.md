@@ -126,3 +126,7 @@ Saat kita menjalankan aplikasi dibrowser mendapatkan koordinat GPS karena browse
     );
   }
   ```
+
+- Soal 16
+
+![1](./images/816s.gif)
