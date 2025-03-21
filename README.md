@@ -52,6 +52,8 @@ Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasi
 
 ![1](./images/36s.gif)
 
+## Praktikum 4
+
 - Soal 7
 
 ![1](./images/47.gif)
