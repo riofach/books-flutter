@@ -31,3 +31,11 @@ Penjelasan Kode
 Mendefinisikan beberapa fungsi asinkron yang mengembalikan nilai setelah penundaan. Fungsi `count()` memanggil ketiga fungsi tersebut secara berurutan, menjumlahkan hasilnya, dan memperbarui status aplikasi dengan total yang dihitung.
 
 ![1](./images/24s.gif)
+
+## Praktikum 3
+
+- Soal 5
+
+Penjelasan Kode
+
+Menggunakan `Completer` untuk mengelola operasi asinkron. Fungsi `getNumber()` menginisialisasi `Completer` dan memanggil fungsi `calculate()`, yang akan menyelesaikan `Completer` setelah penundaan 5 detik dengan mengembalikan nilai 42.

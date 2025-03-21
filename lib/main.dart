@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -67,6 +68,19 @@ class _FuturePageState extends State<FuturePage> {
     });
   }
 
+  late Completer completer; // Mendeklarasikan Completer
+
+  Future getNumber() {
+    completer = Completer<int>(); // Menginisialisasi Completer
+    calculate(); // Memanggil fungsi calculate
+    return completer.future; // Mengembalikan future dari Completer
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds: 5)); // Menunggu selama 5 detik
+    completer.complete(42); // Menyelesaikan Completer dengan nilai 42
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,10 +92,17 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text('Go!'),
               onPressed: () {
-                count();
+                // count(); //praktikum 2
+                getNumber().then((value) {
+                  setState(() {
+                    result = value.toString();
+                  });
+                });
+
                 setState(() {
                   result = 'Loading...'; // Mengubah status menjadi 'Loading...'
                 });
+
                 getData() // Memanggil fungsi untuk mengambil data
                     .then((value) {
                       result = value.body.toString().substring(
