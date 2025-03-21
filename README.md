@@ -96,12 +96,12 @@ Saat kita menjalankan aplikasi dibrowser mendapatkan koordinat GPS karena browse
 
 ## Praktikum 7
 
-- Soal 13
+- Soal 13 <br>
   Tidak terlalu signifikan untuk UI hanya saja tidak membutuhkan akses idzin location, dan menunggu selama 3 detik untuk mendapatkan connection location jika tidak maka akan muncul No Data.
 
 ![1](./images/713s.gif)
 
-- Soal 14
+- Soal 14 <br>
   Code yang ditambahkan hanya menangani error saja untuk hasil masih sama dengan soal 13 tampilannya.
 
 ## Praktikum 8
@@ -148,9 +148,9 @@ File ini mendefinisikan kelas `NavigationSecond`, yang merupakan widget stateful
 
 ![1](./images/816s.gif)
 
-## Praktikum 9 <br>
+## Praktikum 9
 
-- Soal 17
+- Soal 17 <br>
   Penjelasan Code
 
 File ini mendefinisikan kelas `NavigationDialogScreen`, yang merupakan widget stateful untuk menampilkan dialog pilihan warna.
