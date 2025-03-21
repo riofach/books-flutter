@@ -39,3 +39,5 @@ Mendefinisikan beberapa fungsi asinkron yang mengembalikan nilai setelah penunda
 Penjelasan Kode
 
 Menggunakan `Completer` untuk mengelola operasi asinkron. Fungsi `getNumber()` menginisialisasi `Completer` dan memanggil fungsi `calculate()`, yang akan menyelesaikan `Completer` setelah penundaan 5 detik dengan mengembalikan nilai 42.
+
+![1](./images/35s.gif)
