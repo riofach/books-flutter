@@ -9,7 +9,7 @@ class NavigationFirst extends StatefulWidget {
 }
 
 class _NavigationFirstState extends State<NavigationFirst> {
-  Color color = Colors.blue.shade700;
+  Color color = Colors.blue.shade700; // Warna awal
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _NavigationFirstState extends State<NavigationFirst> {
         child: ElevatedButton(
           child: Text('Change Color'),
           onPressed: () {
-            _navigateAndGetColor(context);
+            _navigateAndGetColor(context); // Navigasi ke layar kedua
           },
         ),
       ),
@@ -32,7 +32,7 @@ class _NavigationFirstState extends State<NavigationFirst> {
           context,
           MaterialPageRoute(builder: (context) => const NavigationSecond()),
         ) ??
-        Colors.blue;
-    setState(() {});
+        Colors.blue; // Mengubah warna berdasarkan pilihan
+    setState(() {}); // Memperbarui tampilan
   }
 }

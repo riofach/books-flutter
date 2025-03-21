@@ -129,4 +129,21 @@ Saat kita menjalankan aplikasi dibrowser mendapatkan koordinat GPS karena browse
 
 - Soal 16
 
+Penjelasan Code
+
+### File: `navigation_first.dart`
+
+File ini mendefinisikan kelas `NavigationFirst`, yang merupakan widget stateful yang menampilkan layar pertama dari aplikasi navigasi.
+
+- **Fungsi Utama**:
+  - **`build`**: Membangun tampilan dengan latar belakang berwarna dan sebuah tombol. Ketika tombol ditekan, fungsi `_navigateAndGetColor` dipanggil untuk menavigasi ke layar kedua.
+  - **`_navigateAndGetColor`**: Fungsi ini menggunakan `Navigator.push` untuk membuka `NavigationSecond`. Setelah pengguna memilih warna di layar kedua, warna tersebut dikembalikan dan digunakan untuk memperbarui latar belakang layar pertama.
+
+### File: `navigation_second.dart`
+
+File ini mendefinisikan kelas `NavigationSecond`, yang merupakan widget stateful yang menampilkan layar kedua dari aplikasi navigasi.
+
+- **Fungsi Utama**:
+  - **`build`**: Membangun tampilan dengan tiga tombol, masing-masing untuk memilih warna merah, kuning, dan hijau. Ketika salah satu tombol ditekan, warna yang dipilih dikembalikan ke layar pertama menggunakan `Navigator.pop`.
+
 ![1](./images/816s.gif)

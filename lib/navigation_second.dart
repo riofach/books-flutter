@@ -8,7 +8,7 @@ class NavigationSecond extends StatefulWidget {
 }
 
 class _NavigationSecondState extends State<NavigationSecond> {
-  Color? color;
+  Color? color; // Menyimpan warna yang dipilih
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,22 +20,31 @@ class _NavigationSecondState extends State<NavigationSecond> {
             ElevatedButton(
               child: Text('Red'),
               onPressed: () {
-                color = Colors.red.shade700;
-                Navigator.pop(context, color);
+                color = Colors.red.shade700; // Memilih warna merah
+                Navigator.pop(
+                  context,
+                  color,
+                ); // Mengembalikan warna ke layar pertama
               },
             ),
             ElevatedButton(
               child: Text('Yellow'),
               onPressed: () {
-                color = Colors.yellow.shade700;
-                Navigator.pop(context, color);
+                color = Colors.yellow.shade700; // Memilih warna kuning
+                Navigator.pop(
+                  context,
+                  color,
+                ); // Mengembalikan warna ke layar pertama
               },
             ),
             ElevatedButton(
               child: Text('Green'),
               onPressed: () {
-                color = Colors.green.shade700;
-                Navigator.pop(context, color);
+                color = Colors.green.shade700; // Memilih warna hijau
+                Navigator.pop(
+                  context,
+                  color,
+                ); // Mengembalikan warna ke layar pertama
               },
             ),
           ],
