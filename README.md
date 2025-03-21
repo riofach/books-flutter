@@ -71,7 +71,7 @@ Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasi
 
 ![1](./images/591.gif)
 
-![1](./images/592.png)
+![2](./images/592.png)
 
 - Soal 10
 
@@ -85,3 +85,11 @@ Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasi
 - Soal 11
 
 ![1](./images/611.png)
+
+- Soal 12
+
+### Pengambilan Koordinat GPS di Browser
+
+Saat kita menjalankan aplikasi dibrowser mendapatkan koordinat GPS karena browser modern mendukung API Geolocation. Ketika aplikasi meminta izin untuk mengakses lokasi, browser akan menampilkan dialog untuk meminta izin dari pengguna. Jika pengguna memberikan izin, browser akan menggunakan informasi lokasi perangkat (jika tersedia) untuk memberikan koordinat GPS.
+
+![1](./images/612s.gif)
