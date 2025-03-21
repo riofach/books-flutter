@@ -71,4 +71,4 @@ Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasi
 
 ![1](./images/591.gif)
 
-![1](./images/592.gif)
+![1](./images/592.png)
