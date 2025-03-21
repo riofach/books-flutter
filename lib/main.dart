@@ -92,6 +92,34 @@ class _FuturePageState extends State<FuturePage> {
     }
   }
 
+  void returnFG() {
+    FutureGroup<int> futureGroup = FutureGroup<int>();
+    futureGroup.add(returnOneAsync());
+    futureGroup.add(returnTwoAsync());
+    futureGroup.add(returnThreeAsync());
+    futureGroup.close();
+    futureGroup.future.then((List<int> value) {
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
+  }
+
+  late Future<List<int>> futures;
+  @override
+  void initState() {
+    super.initState();
+    futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,17 +132,20 @@ class _FuturePageState extends State<FuturePage> {
               child: const Text('Go!'),
               onPressed: () {
                 // count(); //praktikum 2
-                getNumber()
-                    .then((value) {
-                      setState(() {
-                        result = value.toString();
-                      });
-                    })
-                    .catchError((error) {
-                      setState(() {
-                        result = 'Error: $error';
-                      });
-                    });
+
+                // getNumber()
+                //     .then((value) {
+                //       setState(() {
+                //         result = value.toString();
+                //       });
+                //     })
+                //     .catchError((error) {
+                //       setState(() {
+                //         result = 'Error: $error';
+                //       });
+                //     }); //praktikum 3
+
+                returnFG(); //praktikum 4
 
                 setState(() {
                   result = 'Loading...'; // Mengubah status menjadi 'Loading...'

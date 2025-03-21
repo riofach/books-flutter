@@ -51,3 +51,7 @@ Perbedaan calculate dengan calculate 2 hanya dilengkapi dengan penanganan kesala
 Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasilnya. Jika berhasil, hasilnya akan ditampilkan; jika terjadi kesalahan, pesan kesalahan akan ditampilkan.
 
 ![1](./images/36s.gif)
+
+- Soal 7
+
+![1](./images/47.gif)
