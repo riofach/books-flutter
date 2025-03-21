@@ -55,3 +55,10 @@ Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasi
 - Soal 7
 
 ![1](./images/47.gif)
+
+- Soal 8
+
+### Perbedaan antara `FutureGroup` dan `Future.wait`
+
+- **FutureGroup**: Memungkinkan penambahan fungsi asinkron secara dinamis dan menunggu hingga semua fungsi selesai. Cocok untuk situasi di mana jumlah fungsi asinkron tidak diketahui sebelumnya.
+- **Future.wait**: Mengharuskan daftar fungsi asinkron yang sudah ditentukan sebelumnya dan mengembalikan hasilnya sebagai daftar setelah semua fungsi selesai. Lebih sederhana untuk digunakan ketika jumlah fungsi sudah diketahui.
