@@ -100,3 +100,6 @@ Saat kita menjalankan aplikasi dibrowser mendapatkan koordinat GPS karena browse
   Tidak terlalu signifikan untuk UI hanya saja tidak membutuhkan akses idzin location, dan menunggu selama 3 detik untuk mendapatkan connection location jika tidak maka akan muncul No Data.
 
 ![1](./images/713s.gif)
+
+- Soal 14
+  Code yang ditambahkan hanya menangani error saja untuk hasil masih sama dengan soal 13 tampilannya.
