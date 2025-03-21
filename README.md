@@ -41,3 +41,13 @@ Penjelasan Kode
 Menggunakan `Completer` untuk mengelola operasi asinkron. Fungsi `getNumber()` menginisialisasi `Completer` dan memanggil fungsi `calculate()`, yang akan menyelesaikan `Completer` setelah penundaan 5 detik dengan mengembalikan nilai 42.
 
 ![1](./images/35s.gif)
+
+- Soal 6
+
+Penjelasan Kode
+
+Perbedaan calculate dengan calculate 2 hanya dilengkapi dengan penanganan kesalahan. Jika terjadi kesalahan selama penundaan, `Completer` akan diselesaikan dengan error.
+
+Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasilnya. Jika berhasil, hasilnya akan ditampilkan; jika terjadi kesalahan, pesan kesalahan akan ditampilkan.
+
+![1](./images/36s.gif)

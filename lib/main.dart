@@ -72,13 +72,24 @@ class _FuturePageState extends State<FuturePage> {
 
   Future getNumber() {
     completer = Completer<int>(); // Menginisialisasi Completer
-    calculate(); // Memanggil fungsi calculate
+    calculate2(); // Memanggil fungsi calculate
     return completer.future; // Mengembalikan future dari Completer
   }
 
-  Future calculate() async {
-    await Future.delayed(const Duration(seconds: 5)); // Menunggu selama 5 detik
-    completer.complete(42); // Menyelesaikan Completer dengan nilai 42
+  // Future calculate() async {
+  //   await Future.delayed(const Duration(seconds: 5)); // Menunggu selama 5 detik
+  //   completer.complete(42); // Menyelesaikan Completer dengan nilai 42
+  // }
+
+  Future calculate2() async {
+    try {
+      await new Future.delayed(
+        const Duration(seconds: 5), // Menunggu selama 5 detik
+      );
+      completer.complete(42); // Menyelesaikan Completer dengan nilai 42
+    } catch (e) {
+      completer.completeError(e); // Menyelesaikan Completer dengan error
+    }
   }
 
   @override
@@ -93,11 +104,17 @@ class _FuturePageState extends State<FuturePage> {
               child: const Text('Go!'),
               onPressed: () {
                 // count(); //praktikum 2
-                getNumber().then((value) {
-                  setState(() {
-                    result = value.toString();
-                  });
-                });
+                getNumber()
+                    .then((value) {
+                      setState(() {
+                        result = value.toString();
+                      });
+                    })
+                    .catchError((error) {
+                      setState(() {
+                        result = 'Error: $error';
+                      });
+                    });
 
                 setState(() {
                   result = 'Loading...'; // Mengubah status menjadi 'Loading...'
