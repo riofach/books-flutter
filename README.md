@@ -147,3 +147,17 @@ File ini mendefinisikan kelas `NavigationSecond`, yang merupakan widget stateful
   - **`build`**: Membangun tampilan dengan tiga tombol, masing-masing untuk memilih warna merah, kuning, dan hijau. Ketika salah satu tombol ditekan, warna yang dipilih dikembalikan ke layar pertama menggunakan `Navigator.pop`.
 
 ![1](./images/816s.gif)
+
+## Praktikum 9 <br>
+
+- Soal 17
+  Penjelasan Code
+
+File ini mendefinisikan kelas `NavigationDialogScreen`, yang merupakan widget stateful untuk menampilkan dialog pilihan warna.
+
+### Fungsi Utama
+
+- **`build`**: Membangun tampilan dengan latar belakang berwarna dan sebuah tombol. Ketika tombol ditekan, fungsi `_showColorDialog` dipanggil untuk menampilkan dialog.
+- **`_showColorDialog`**: Fungsi ini menampilkan `AlertDialog` yang meminta pengguna untuk memilih warna. Dialog ini memiliki tiga tombol untuk memilih warna merah, kuning, atau hijau. Setelah pengguna memilih warna, dialog akan ditutup dan warna latar belakang layar utama diperbarui dengan warna yang dipilih.
+
+![1](./images/917s.gif)
