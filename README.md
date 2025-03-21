@@ -79,3 +79,9 @@ Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasi
 
 - **returnError**: Fungsi ini hanya mensimulasikan kesalahan dengan melempar exception setelah penundaan. Tidak ada penanganan kesalahan di dalamnya.
 - **handleError**: Fungsi ini menangani kesalahan yang mungkin terjadi saat memanggil `returnError`. Dengan menggunakan blok `try-catch`, fungsi ini dapat menangkap dan mengelola kesalahan, serta memastikan bahwa bagian `finally` selalu dieksekusi.
+
+## Praktikum 6
+
+- Soal 11
+
+![1](./images/611.png)
