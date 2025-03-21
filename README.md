@@ -93,3 +93,10 @@ Fungsi `getNumber()` memanggil salah satu dari fungsi di atas dan menangani hasi
 Saat kita menjalankan aplikasi dibrowser mendapatkan koordinat GPS karena browser modern mendukung API Geolocation. Ketika aplikasi meminta izin untuk mengakses lokasi, browser akan menampilkan dialog untuk meminta izin dari pengguna. Jika pengguna memberikan izin, browser akan menggunakan informasi lokasi perangkat (jika tersedia) untuk memberikan koordinat GPS.
 
 ![1](./images/612s.gif)
+
+## Praktikum 7
+
+- Soal 13
+  Tidak terlalu signifikan untuk UI hanya saja tidak membutuhkan akses idzin location, dan menunggu selama 3 detik untuk mendapatkan connection location jika tidak maka akan muncul No Data.
+
+![1](./images/713s.gif)
